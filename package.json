@@ -4,7 +4,7 @@
   "main": "async-await.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "main": "app.js"
+    "main": "question2.js"
     
   },
   "author": "anuj",
