@@ -2,24 +2,24 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const invoiceSchema = new Schema({
-  
-  'Invoice ID': String,
-  Branch: String,
-  City: String,
-  'Customer type': String,
-  'Product line': String,
+  invoiceID: String,
+  branch: String,
+  city: String,
+  customerType: String,
+  productLine: String,
   name: String,
   image: String,
-  'Unit price': Number,
-  Quantity: Number,
-  'Tax 5%': Number,
-  Total: Number,
-  Date: String,
-  Time: String,
-  Payment: String,
+  unitPrice: Number,
+  quantity: Number,
+  tax5Percent: Number,
+  total: Number,
+  date: String, // Consider using Date type for dates
+  time: String,
+  payment: String,
   cogs: Number,
-  'gross income': Number,
-  Rating: Number,
+  grossIncome: Number,
+  rating: Number,
 });
 
-module.exports = mongoose.model('Invoice', invoiceSchema);
+//creating collection and its schma
+module.exports = mongoose.model('Invoices', invoiceSchema);

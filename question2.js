@@ -56,8 +56,8 @@ app.get('/', (req, res) => {
 // Get all invoices data from the database
 app.get("/api/invoices", async (req, res) => {
   try {
-    const invoices = await Invoice.find();
-    res.render("loaddata", { title: "All Invoices", invoices: invoices });
+    const invoices123 = await Invoice.find();
+    res.render("loaddata", { title: "All Invoices", invoices: invoices123 });
   } catch (err) {
     res.status(500).send(err.message || "Internal Server Error");
   }
@@ -74,7 +74,7 @@ app.get("/api/insert", (req, res) => {
 // Handle the form submission
 app.post("/api/insert", async (req, res) => {
   try {
-    const invoice = await Invoice.create({
+    await Invoice.create({
       invoiceID: req.body.invoiceID,
       branch: req.body.branch,
       city: req.body.city,
